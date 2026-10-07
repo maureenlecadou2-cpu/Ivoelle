@@ -838,6 +838,7 @@ document.addEventListener('DOMContentLoaded', function () {
       (name.value.trim() ? email : name).focus();
       return;
     }
+    fetch('https://formsubmit.co/ajax/helloivoelle@outlook.com', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
     form.hidden = true;
     thanks.hidden = false;
   });
